@@ -2,7 +2,7 @@
 
 This is a project to test our abilities of writing functional C programs. We have been tasked with writing the printf function that imitates the C standard printf function.
 
-We have been paired in twos to work on this project.
+We have been paired in twos to work on this project
 
 ## Authors
 
