@@ -28,7 +28,6 @@ int print_hexadecimal_recursive(unsigned int num, int uppercase)
 }
 
 
-#include "main.h"
 
 /**
  * print_hexadecimal_uppercase - Prints an unsigned integer in uppercase
@@ -40,4 +39,30 @@ int print_hexadecimal_recursive(unsigned int num, int uppercase)
 int print_hexadecimal_uppercase(va_list args)
 {
 	return (print_hexadecimal(args, 1));
+}
+
+
+
+/**
+ * print_hexadecimal - Prints an unsigned integer in hexadecimal format.
+ * @args: Arguments list.
+ * @uppercase: Whether to print the hexadecimal in uppercase or not.
+ *
+ * Return: The number of characters printed.
+ */
+
+int print_hexadecimal(va_list args, int uppercase)
+{
+	unsigned int num = va_arg(args, unsigned int);
+	int count = 0;
+
+	if (num == 0)
+	{
+		_putchar('0');
+		return 1;
+	}
+
+	count = print_hexadecimal_recursive(num, uppercase);
+
+	return (count);
 }
