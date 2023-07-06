@@ -27,6 +27,7 @@ int main(void)
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
     _printf("%b\n", 98);
-	int print_octal(va_list args)
+	int print_octal(va_list args);
+	int print_octal_recursive(unsigned int num);
 	return (0);
 }
