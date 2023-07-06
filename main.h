@@ -33,4 +33,7 @@ int print_octal_recursive(unsigned int num);
 int print_hexadecimal_uppercase(va_list args);
 int print_hexadecimal_recursive(unsigned int num, int uppercase);
 int print_hexadecimal(va_list args, int uppercase);
+int print_hex_address(unsigned long int address);
+int print_pointer(va_list args);
+
 #endif /* MAIN_H */
