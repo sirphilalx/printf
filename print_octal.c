@@ -21,3 +21,23 @@ int print_octal(va_list args)
 
 	return (count);
 }
+
+
+/**
+ * print_octal_recursive - Prints an unsigned integer
+ *				in octal format recursively.
+ * @num: The unsigned integer to be printed.
+ *
+ * Return: The number of characters printed.
+ */
+int print_octal_recursive(unsigned int num)
+{
+	int count = 0;
+
+	if (num / 8)
+		count += print_octal_recursive(num / 8);
+
+	count += _putchar((num % 8) + '0');
+
+	return (count);
+}
